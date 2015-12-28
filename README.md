@@ -34,7 +34,7 @@ button.click(function(){
 # Development
 Nitro Ribbon is still at the Beta stage. All pull requests will be considered. Bower and Grunt are used to manage dependencies and build the project, respectivly. The following commands can be used to build the project from source:
 
-``sh
+```sh
 git clone https://github.com/NitroLabs/nitro-ribbon.git nitro-ribbon
 cd nitro-ribbon
 npm install
@@ -54,29 +54,30 @@ Include the css and js files from the build folder:
 <html>
     <head>
         <script type="text/javascript " src="/ribbon/build/css/ribbon.js"></script>
-        <link rel="stylesheet" href="/ribbon/build/css/ribbon.css"">
+        <link rel="stylesheet" href="/ribbon/build/css/ribbon.css">
     </head>
-    
-    <body> 
+
+    <body>
         <div class="nitro-ribbon" data-role="tabs">
             <div class="ribbon-header"></div>
             <div class="ribbon-content"></div>
         </div>
     </body>
+```
 
 Configure the menu with javascript
 ```javascript
 $.ready(function(){
-	var a = $('.nitro-ribbon');
-	
+	var a = $('.nitro-ribbon')
+
 	// Build the menu
 	a.ribbon(config);
-    
+
     // Attach click event to the folder button
 	a.ribbon('folder-button').click(function(event){
 		console.log('Folder button clicked');
 	});
-    
+
     // Attach click event to the share button
 	a.ribbon('share-button').click(function(event){
 		console.log('Share button clicked');
