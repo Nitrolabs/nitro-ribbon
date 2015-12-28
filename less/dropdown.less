@@ -1,0 +1,49 @@
+@import "utils";
+@import "variables";
+
+
+.d-menu.nitro-menu {
+	border-radius: 5px;
+	border: 1px solid @dropdownBorder;
+	background: @dropdownGradientTop; /* Old browsers */
+	box-shadow: -4px 4px 6px 0px rgba(0,0,0,0.08), 4px 4px 6px 0px rgba(0,0,0,0.08);
+	.gradient(linear; @dropdownGradientBottom,@dropdownGradientTop);
+	li {
+		border-radius: @dropdownBorderRadius;
+		a {
+			font-size: 0.9em;
+			color: @grayDark;
+		}
+		&:hover,a:hover {
+			color: white;
+			background-color: @dropdownItemActive;
+		}
+		&:first-child a {
+			border-top-left-radius: (@dropdownBorderRadius - 2);
+			border-top-right-radius: (@dropdownBorderRadius - 2);
+		}
+		&:last-child a {
+			border-bottom-left-radius: (@dropdownBorderRadius - 2);
+			border-bottom-right-radius: (@dropdownBorderRadius - 2);
+		}
+	}
+	li:hover > .dropdown-toggle {
+		&:before {
+			border-color: @white;
+		}
+	}
+	&.context {
+		li {
+			a {
+				font-size: .75rem;
+				padding: .3125rem 2rem .3125rem 2.5rem;
+
+				.icon {
+					margin-top: -.4375rem;
+					font-size: .825rem;
+					color: inherit;
+				}
+			}
+		}
+	}
+}

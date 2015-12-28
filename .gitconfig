@@ -1,0 +1,19 @@
+[user]
+        name = Kyoto Ishii
+        email = kyoto.ishii@gmail.com
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[push]
+        default = simple
+[filter "media"]
+        required = true
+        clean = git media clean %f
+        smudge = git media smudge %f
+[filter "lfs"]
+        clean = git lfs clean %f
+        smudge = git lfs smudge %f
+        required = true

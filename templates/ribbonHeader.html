@@ -1,0 +1,21 @@
+<div class="ribbon-header">
+   <div class="ribbon-title-bar">
+      <ul class="command-holder">
+         {{#each titleLeft}}
+         	<li class="command-button"><a data-name="{{ name }}" class="{{ glyph }}"></a></li>
+         {{/each}}
+      </ul>
+      <div class="ribbon-title"><span>{{ title }}</span></div>
+      <ul class="command-holder">
+         {{#each titleRight}}
+            <li class="command-button"><a data-name="{{ name }}" class="{{ glyph }}"></a></li>
+         {{/each}}
+      </ul>
+   </div>
+   <ul class="tabs-holder">
+      {{#each tabs}}
+         <li class="{{#if @first}}active{{/if}}"><a href="#tab_{{@key}}">{{@key}}</a></li>
+      {{/each}}
+      <li class="tabs-hide"><a href="#" class="mif-eject" title="Hide Menu"></a></li>
+   </ul>
+</div>

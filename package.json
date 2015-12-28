@@ -1,0 +1,42 @@
+{
+  "author": "Nitrolabs Limited",
+  "name": "ribbon",
+  "version": "0.0.1",
+  "description": "Ribbon UI influenced by Microsoft Office for Mac OSX",
+  "keywords": [
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://www.nitrolabs.com",
+  "style": "build/css/ribbon.css",
+  "mif": "build/css/ribbon-icons.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitrolabs/nitro-ribbon.git"
+  },
+  "license": {
+    "type": "APACHE 2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.3.0",
+    "grunt-replace": "^0.9.1",
+    "load-grunt-tasks": "^3.1.0",
+    "grunt-contrib-handlebars": "~0.11.0"
+  }
+}

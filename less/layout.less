@@ -1,0 +1,229 @@
+@import "utils";
+@import "variables";
+
+// Defaults
+.nitro-ribbon {
+    a {
+        text-decoration: none;
+    }
+    button {
+        background-color: transparent;
+        display: block;
+        cursor: default;
+        border: 0;
+        outline: none;
+        font-size: .8em;
+    }
+}
+
+// General layout
+.nitro-ribbon {
+    .ribbon-header {
+        min-height: 50px;
+        background: @officeLightBlue; /* Old browsers */
+        box-shadow: 0px @ribbonShadowSize @ribbonShadowSpread rgba(0,0,0,@ribbonShadowAlpha);
+        .gradient(linear; @officeMediumBlue,@officeLightBlue);
+
+        .ribbon-title-bar {
+            display: flex;
+            color: @officePastelWhite;
+
+            .ribbon-title {
+                text-align: center;
+                line-height: 28px;
+                flex:1;
+            }
+
+            .command-holder {
+                flex:1;
+                margin:0;
+                padding:0;
+                width: 100%;
+                overflow: hidden;
+                padding: @commandsPadding;
+                span  {
+                    // Document title
+                    font-size: 13px;
+                    line-height: 22px;
+                    margin-left: 600px;
+                    font-weight: 400;
+                    color: @officePastelWhite;
+                    text-shadow: 0px 0px 0.5px black;
+                }
+            }
+
+            .command-holder:first-child * {
+                float:left;
+            }
+            .command-holder:last-child * {
+                float:right;
+            }
+        }
+
+        // Tabs
+        .tabs-holder {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: block;
+            z-index: 2;
+            .clear-float;
+
+            li {
+                display: block;
+                float: left;
+                margin-right: 5px;
+            }
+            li.tabs-hide {
+                float: right;
+                background: transparent;
+                width: auto;
+                border: 0;
+                padding: 0;
+                a {
+                    margin: 0;
+                    padding: 2px 6px;
+                    animation-name: spin;
+                    animation-duration: 400ms;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+                a.active {
+                    .rotate(180);
+                }
+            }
+        }
+    }
+
+    // Main content
+    .ribbon-content {
+        z-index: 1;
+        position: relative;
+        margin-top: -1px;
+        background-color: #ffffff;
+        height: 70px;
+        border: 1px #d4d4d4 solid;
+        background-color: @officeHardWhite; /* Old browsers */
+        .gradient(linear; @officeSoftWhite,@officeHardWhite);
+
+        .tab-panel {
+            display: block;
+            height: 100%;
+            padding: 5px 0 4px;
+            box-sizing: border-box;
+
+            .tab-panel-group {
+                height: 100%;
+                position: relative;
+                display: block;
+                float: left;
+                padding: 0 5px;
+                border-right: 1px @fmBorderColor solid;
+
+                &:last-child {
+                    margin-right: 0;
+                    border-right: 0;
+                }
+            }
+
+            .tab-group-caption {
+                font-size: 10px;
+                margin: 2px 0 -2px;
+                text-align: center;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                white-space: nowrap;
+                background: @grayLighter;
+            }
+
+            .tab-group-content {
+                position: relative;
+                &.tab-group-big-button {
+                    float: left;
+                }
+                &.tab-group-mini-button:first-child {
+                    margin-top: -2px;
+                }
+                &.tab-group-mini-button:nth-child(3n-1) {
+                    margin-top: -2px;
+                }
+            }
+
+            .tab-content-segment {
+                display: block;
+                float: left;
+                position: relative;
+            }
+
+            .tab-content-composit {
+
+            }
+        }
+    }
+}
+
+// Buttons [depreciated]
+.nitro-ribbon {
+    .fluent-button, .fluent-big-button, .fluent-tool-button {
+        background-color: transparent;
+        padding: .3125rem;
+        display: block;
+        cursor: default;
+        border: 0;
+        outline: none;
+        font-size: .8em;
+        line-height: 1.0;
+        vertical-align: middle;
+
+        &:hover {
+            background-color: @fmElementHoverBackground;
+        }
+        img, .icon, [class*=mif-] {
+            line-height: 1.2;
+            display: block;
+            float: left;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            color: @fmTabRestColor;
+            vertical-align: middle;
+        }
+
+        .label {
+            display: inline-block;
+            color: inherit;
+            font: inherit;
+        }
+
+        &:active {
+            top: 0;
+            left: 0;
+            background-color: darken(@fmElementHoverBackground, 20%);
+        }
+
+        &.dropdown-toggle {
+            &:before {
+                margin-top: -.3125rem;
+            }
+        }
+    }
+
+    .nitro-menu {
+        position: absolute;
+        top: 100%;
+        z-index: 100;
+        margin-left: 8px;
+        a {
+            padding: 4px 24px;
+            font-size: .8em;
+            &:hover {
+                background-color: @fmElementHoverBackground;
+                color: @fmTabRestColor;
+            }
+        }
+    }
+}

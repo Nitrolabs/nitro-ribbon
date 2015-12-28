@@ -1,0 +1,271 @@
+@import "utils";
+@import "variables";
+
+.nitro-ribbon {
+
+	.command-button {
+		margin:0;
+		padding:0;
+		display: block;
+		margin: 0px 2px;
+
+		a {
+			color: @officePastelWhite;
+			border-radius: 3px;
+			padding: 3px 5px;
+			border: 1px solid transparent;
+			text-shadow: 0px 0px 0.5px black;
+			&:hover {
+				border: 1px solid @officeDarkBlue;
+				background: @commandButtonGradientTop; /* Old browsers */
+				.gradient(linear; @commandButtonGradientBottom,@commandButtonGradientTop);
+			}
+			&:active {
+				border: 1px solid @commandActiveBorder;
+				background: @commandActiveGradientTop; /* Old browsers */
+				.gradient(linear; @commandActiveGradientBottom,@commandActiveGradientTop);
+				.inner-shadow (0, 0px, 4px, 1px, @alpha: @commandActiveShadowAlpha);
+			}
+		}
+		&:first-child {
+                margin-left: 10px;
+        }
+	}
+	.tabs-holder {
+		border-bottom: 1px solid @officeDarkBlue;
+		padding-top: @tabsTopPadding;
+
+	 	li {
+			background: transparent;
+			padding-bottom: 1px;
+			margin-bottom: -1px;
+			border-top-left-radius: @tabsBorderRadius;
+			border-top-right-radius: @tabsBorderRadius;
+			border-top: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-right: 1px solid transparent;
+			border-bottom: 0;
+			a {
+				display: block;
+				float: left;
+				color: @officePastelWhite;
+				text-decoration: none;
+				font-weight: @tabsFontWeight;
+				font-size: @tabsFontSize;
+				padding: 0.25rem 1rem 0.1rem 1em;
+				line-height: 1.15em;
+			}
+			&:first-child {
+	                margin-left: 10px;
+	        }
+			&.active {
+				background: @officeTabsTop; /* Old browsers */
+				.gradient(linear; @officeHardWhite,@officeTabsTop);
+				border-top: 1px solid @officeTabsBorderColor;
+				border-left: 1px solid @officeTabsBorderColor;
+				border-right: 1px solid @officeTabsBorderColor;
+				border-bottom: 0;
+				a {
+					font-weight: @tabsFontWeight;
+					color: @officeDarkBlue;
+				}
+			}
+		}
+	}
+
+
+	.fluent-big-button {
+	    padding: 0px 7px;
+	    text-align: center;
+	    white-space: normal;
+	    line-height: 12px;
+	    float: left;
+	    position: relative;
+	}
+
+	// Generic button css
+	.nitro-button {
+	 	padding: 0px 7px;
+	    white-space: normal;
+	    line-height: 12px;
+	    float: left;
+	    position: relative;
+	    .label {
+	    	font-size: 1.0em;
+	    	text-align: center;
+	    	display: inline-block;
+	    }
+		.button {
+			display: block;
+			margin: 0 auto 1px;
+			color: @bigButtonIconColor;
+			font-size: @bigButtonIconHeight;
+			padding: @bigButtonIconPadding;
+			border-radius: @bigButtonIconRadius;
+			text-shadow: 0px 1px 0.5px white;
+			border: 1px solid transparent;
+			&:hover {
+				text-shadow: 0px 1px 1px white;
+				box-shadow: 0px 1px 1px white;
+				background: @buttonHoverGradientTop;
+				border-color: @buttonHoverBorderColor;
+				.gradient(linear; @buttonHoverGradientBottom,@buttonHoverGradientTop);
+			}
+			&:active {
+				text-shadow: none;
+				box-shadow: 0px 1px 1px white;
+				background: @buttonClickBackground;
+				border-color: @buttonClickBorderColor;
+				text-shadow: 0px 0px 0.5px lighten(@buttonClickBackground, 20%);
+				.inner-shadow (0, 0px, 5px, 0px, @alpha: @buttonClickShadowAlpha);
+			}
+		}
+	}
+
+	// Large full height button
+	.nitro-big-button {
+	 	.label {
+	    	font-size: 1.0em;
+	    	text-align: center;
+	    	display: inline-block;
+	    }
+		.button {
+			display: block;
+			margin: 0 auto 1px;
+			color: @bigButtonIconColor;
+			width: @bigButtonIconWidth;
+			height: @bigButtonIconHeight;
+			font-size: @bigButtonIconHeight;
+			padding: @bigButtonIconPadding;
+			border-radius: @bigButtonIconRadius;
+			text-shadow: 0px 1px 0.5px white;
+			border: 1px solid transparent;
+		}
+		img {
+			padding: 0 2px;
+			height: @miniButtonIconHeight;
+			vertical-align: middle;
+		}
+		&.dropdown-toggle a {
+			padding-right: 12px;
+		}
+	}
+
+	// Small 1/2 height Button
+	.nitro-small-button {
+	 	float: none;
+	 	white-space: normal;
+	    position: relative;
+		.button {
+			display: inline-block;
+			margin: 0 auto @smallButtonSpacing;
+			padding: @smallButtonPadding;
+			height: @smallButtonIconHeight;
+			font-size: @smallButtonIconHeight;
+			text-shadow: 0px 0px 0.5px white;
+			border: 1px solid transparent;
+
+			.icon {
+				margin: 0 2px;
+				margin-left: 4px;
+				line-height: @smallButtonIconHeight;
+			}
+			.label {
+		    	font-size: 12px;
+		    	text-align: left;
+		    	display: inline-block;
+		    	margin-right: 8px;
+		    	line-height: @smallButtonIconHeight;
+		    }
+		    img {
+		    	margin: 0 2px;
+		    	height: @smallButtonIconHeight;
+				vertical-align: middle;
+			}
+		}
+		&.dropdown-toggle .label {
+			margin-right: 12px;
+		}
+	}
+
+
+	// Mini 1/3 height Button
+	.nitro-mini-button {
+	 	float: none;
+	 	text-align: center;
+	    white-space: normal;
+	    position: relative;
+		.button {
+			display: inline-block;
+			margin: 0 auto @miniButtonSpacing;
+			padding: @miniButtonPadding;
+			height: @miniButtonIconHeight;
+			font-size: @miniButtonIconHeight;
+			text-shadow: 0px 0px 0.5px white;
+			border: 1px solid transparent;
+			.icon {
+				margin: 0 2px;
+				line-height: @miniButtonIconHeight;
+			}
+			.label {
+		    	font-size: 12px;
+		    	text-align: left;
+		    	display: inline-block;
+		    	margin-right: 8px;
+		    	line-height: @miniButtonIconHeight;
+		    }
+		    img {
+		    	margin: 0 2px;
+		    	height: @miniButtonIconHeight;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	// Wrapper for mini-buttons and small-buttons
+	// TODO Include this with js
+	.nitro-button-group {
+		.nitro-mini-button:first-child {
+			margin-top: -2px;
+		}
+		.nitro-small-button:first-child {
+			margin-top: 1px;
+		}
+	}
+
+	// Add arrow on dropdown buttons
+	.nitro-button.dropdown-toggle:before {
+	    display: block;
+	    position: absolute;
+	    vertical-align: middle;
+	    color: transparent;
+	    font-size: 0;
+	    content: "";
+	    height: 3px;
+	    width: 3px;
+	    background-color: transparent;
+	    border-left: 1px solid;
+	    border-bottom: 1px solid;
+	    border-color: #555;
+	    top: 46%;
+	    left: 100%;
+	    margin-left: -1rem;
+	    margin-top: -0.1625rem;
+	    z-index: 2;
+	    .rotate(-45);
+	}
+	.nitro-big-button.dropdown-toggle:before {
+		top: 42%;
+	}
+	.nitro-big-button.dropdown-toggle a {
+		padding-right: 12px;
+	}
+	.nitro-mini-button.dropdown-toggle .label,
+	.nitro-small-button.dropdown-toggle .label {
+		margin-right: 10px;
+	}
+
+}
+
+
+

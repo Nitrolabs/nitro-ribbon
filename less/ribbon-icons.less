@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'metro';
+	src:url('/packages/nitrolabs_ribbon/nitro-ribbon/fonts/metro.eot?izvoei');
+	src:url('/packages/nitrolabs_ribbon/nitro-ribbon/fonts/metro.eot?#iefixizvoei') format('embedded-opentype'),
+	url('/packages/nitrolabs_ribbon/nitro-ribbon/fonts/metro.woff?izvoei') format('woff'),
+	url('/packages/nitrolabs_ribbon/nitro-ribbon/fonts/metro.ttf?izvoei') format('truetype'),
+	url('/packages/nitrolabs_ribbon/nitro-ribbon/fonts/metro.svg?izvoei#metro') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="mif-"], [class*=" mif-"] {
+	display: inline-block;
+	font: normal normal normal 1.5em/1;
+	font-family: metro, "Segoe UI", "Open Sans", serif;
+	line-height: 1 ;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	vertical-align: middle;
+    position: static;
+    //margin-bottom: 20%;
+
+	&:before {
+		font-family: metro, serif;
+	}
+}
+
+@import "ribbon-icons-mixins";
+@import "ribbon-icons-animation";
+@import "ribbon-icons-content";
+
