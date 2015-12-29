@@ -47,7 +47,7 @@ grunt watch
 # Demo
 This plugin is available as a [Meteor package](https://github.com/NitroLabs/meteor-ribbon)
 
-There is also a live demo [ribbon.meteor.com]. The source code for the demo is also on Github [https://github.com/NitroLabs/meteor-ribbon-demo](https://github.com/NitroLabs/meteor-ribbon-demo)
+There is also a live demo [ribbon.meteor.com](ribbon.meteor.com). The source code for the demo is also on Github [https://github.com/NitroLabs/meteor-ribbon-demo](https://github.com/NitroLabs/meteor-ribbon-demo)
 
 # Example
 Include the css and js files from the build folder:
