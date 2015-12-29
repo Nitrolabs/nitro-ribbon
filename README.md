@@ -32,7 +32,8 @@ button.click(function(){
 ```
 
 # Development
-Nitro Ribbon is still at the Beta stage. All pull requests will be considered. Bower and Grunt are used to manage dependencies and build the project, respectivly. The following commands can be used to build the project from source:
+Nitro Ribbon is still at the Beta stage. Pull requests and feature suggestions welcome.
+All pull requests will be considered. Bower and Grunt are used to manage dependencies and build the project, respectivly. The following commands can be used to build the project from source:
 
 ```sh
 git clone https://github.com/NitroLabs/nitro-ribbon.git nitro-ribbon
@@ -46,7 +47,7 @@ grunt watch
 # Demo
 This plugin is available as a [Meteor package](https://github.com/NitroLabs/meteor-ribbon)
 
-There is also a live demo [here]. The source code for the demo is also on Github [https://github.com/NitroLabs/meteor-ribbon-demo](https://github.com/NitroLabs/meteor-ribbon-demo)
+There is also a live demo [ribbon.meteor.com]. The source code for the demo is also on Github [https://github.com/NitroLabs/meteor-ribbon-demo](https://github.com/NitroLabs/meteor-ribbon-demo)
 
 # Example
 Include the css and js files from the build folder:
@@ -224,8 +225,9 @@ var config = {
 * handlebars (included)
 
 # Credit
-Icon font and JavaScript widgets based on 
-[Metro UI CSS](https://metroui.org.ua/font.html) 
+This package is actively maintained and supported by [NitroLabs](http://www.nitrolabs.com/).
+Icon font and JavaScript widgets based on
+[Metro UI CSS](https://metroui.org.ua/font.html)
 
 # License
 Apache 2.0
