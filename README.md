@@ -132,10 +132,10 @@ var config = {
 						label: 'Image',
 						glyph: 'mif-file-picture',
 						dropdown: {
-							"msg":"Message",
-							"evt":Event",
-							"mtg":"Meeting",
-							"cnt":"Contact"
+							'msg':'Message',
+							'evt':'Event',
+							'mtg':'Meeting',
+							'cnt':'Contact'
 						}
 					}
 				],[
@@ -157,10 +157,10 @@ var config = {
 						label: 'Calendar Next',
 						img: '/img/Calendar-Next.png',
 						dropdown: {
-							"today":Today",
-							"monday":"Monday",
-							"tuesday":"Tuesday",
-							"friday":"Friday"
+							'today':'Today',
+							'monday':'Monday',
+							'tuesday':'Tuesday',
+							'friday':'Friday'
 						}
 					}
 				],[
@@ -192,10 +192,10 @@ var config = {
 						label: 'comment',
 						glyph: 'mif-bubble',
 						dropdown: {
-							"now":"Now",
-							"soon":"Soon",
-							"later":"Later",
-							"never":"Never"
+							'now':'Now',
+							'soon':'Soon',
+							'later':'Later',
+							'never':'Never'
 						}
 					},
 				]
