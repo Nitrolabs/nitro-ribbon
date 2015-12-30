@@ -1,5 +1,19 @@
 (function( $ ) {
 	$.fn.ribbon = function( config ) {
+
+        // Users can select buttons by name
+        if (typeof config === 'string' || config instanceof String){
+            var selector = '[data-name="' + config + '"]';
+            var buttons = this.find(selector);
+
+            // Add the options alias
+            buttons.menuItems = function(){
+                return buttons.filter('.dropdown').next('ul.nitro-menu').find('li');
+            }
+            return buttons;
+        }
+
+        // The full ribbon configuration
         this.each(function() {
             var container = $( this );
             var headerClass = "ribbon-header";

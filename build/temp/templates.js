@@ -78,9 +78,11 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":container.program(21, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n            </div>\n";
 },"8":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=depth0 != null ? depth0 : {};
+    var stack1, helper, alias1=depth0 != null ? depth0 : {};
 
-  return "                  <button class=\"nitro-button nitro-big-button "
+  return "                  <button data-name=\""
+    + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+    + "\" class=\"nitro-button nitro-big-button "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\">\n                     <a href=\"#\" class=\"button\">\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.glyph : depth0),{"name":"if","hash":{},"fn":container.program(11, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -109,9 +111,11 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
     + container.escapeExpression(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"label","hash":{},"data":data}) : helper)))
     + "</span>\n";
 },"17":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=depth0 != null ? depth0 : {};
+    var stack1, helper, alias1=depth0 != null ? depth0 : {};
 
-  return "                  <button class=\"nitro-button nitro-small-button "
+  return "                  <button data-name=\""
+    + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+    + "\" class=\"nitro-button nitro-small-button "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\">\n                     <a href=\"#\" class=\"button\">\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.glyph : depth0),{"name":"if","hash":{},"fn":container.program(11, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -119,9 +123,11 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.label : depth0),{"name":"if","hash":{},"fn":container.program(15, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "                     </a>\n                  </button>\n";
 },"19":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=depth0 != null ? depth0 : {};
+    var stack1, helper, alias1=depth0 != null ? depth0 : {};
 
-  return "                  <button class=\"nitro-button nitro-mini-button "
+  return "                  <button data-name=\""
+    + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+    + "\" class=\"nitro-button nitro-mini-button "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\">\n                     <a href=\"#\" class=\"button\">\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.glyph : depth0),{"name":"if","hash":{},"fn":container.program(11, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -135,8 +141,12 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.dropdown : depth0),{"name":"each","hash":{},"fn":container.program(22, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "                  </ul>\n";
 },"22":function(container,depth0,helpers,partials,data) {
-    return "                        <li><a href=\"#\">"
-    + container.escapeExpression(container.lambda(depth0, depth0))
+    var helper, alias1=container.escapeExpression;
+
+  return "                        <li><a data-name="
+    + alias1(((helper = (helper = helpers.key || (data && data.key)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"key","hash":{},"data":data}) : helper)))
+    + " href=\"#\">"
+    + alias1(container.lambda(depth0, depth0))
     + "</a></li>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;

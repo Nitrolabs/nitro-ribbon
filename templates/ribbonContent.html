@@ -6,7 +6,7 @@
             <div class="tab-group-content tab-group-{{type}}">
 
                {{#ifCond type "big-button"}}
-                  <button class="nitro-button nitro-big-button {{#if dropdown}}dropdown-toggle{{/if}}">
+                  <button data-name="{{name}}" class="nitro-button nitro-big-button {{#if dropdown}}dropdown-toggle{{/if}}">
                      <a href="#" class="button">
                         {{#if glyph}}
                            <span class="icon {{glyph}}"></span>
@@ -22,7 +22,7 @@
                {{/ifCond}}
 
                {{#ifCond type "small-button"}}
-                  <button class="nitro-button nitro-small-button {{#if dropdown}}dropdown-toggle{{/if}}">
+                  <button data-name="{{name}}" class="nitro-button nitro-small-button {{#if dropdown}}dropdown-toggle{{/if}}">
                      <a href="#" class="button">
                         {{#if glyph}}
                            <span class="icon {{glyph}}"></span>
@@ -38,7 +38,7 @@
                {{/ifCond}}
 
                {{#ifCond type "mini-button"}}
-                  <button class="nitro-button nitro-mini-button {{#if dropdown}}dropdown-toggle{{/if}}">
+                  <button data-name="{{name}}" class="nitro-button nitro-mini-button {{#if dropdown}}dropdown-toggle{{/if}}">
                      <a href="#" class="button">
                         {{#if glyph}}
                            <span class="icon {{glyph}}"></span>
@@ -56,7 +56,7 @@
                {{#if dropdown}}
                   <ul class="d-menu nitro-menu" data-role="dropdown">
                      {{#each dropdown}}
-                        <li><a href="#">{{this}}</a></li>
+                        <li><a data-name={{@key}} href="#">{{this}}</a></li>
                      {{/each}}
                   </ul>
                {{/if}}
