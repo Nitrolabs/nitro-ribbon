@@ -8,7 +8,7 @@
 
             // Add the options alias
             buttons.menuItems = function(){
-                return buttons.filter('.dropdown').next('ul.nitro-menu').find('li');
+                return buttons.filter('.dropdown-toggle').next('ul.nitro-menu').find('li');
             }
             return buttons;
         }
