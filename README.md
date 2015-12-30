@@ -85,8 +85,12 @@ $.ready(function(){
 	});
 
 	// Attach click handlers to the dropdown menu
-
-}
+	// The menuItems method provides an alias to the dropdown <li> elements
+	a.ribbon('message-dropdown').menuItems().click(function (event){
+		var selected = $(event.target).data('value');
+		console.log('Selected '+selected+' from message-dropdown');
+	});
+});
 
 
 var config = {
