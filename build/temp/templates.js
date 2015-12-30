@@ -143,7 +143,7 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
 },"22":function(container,depth0,helpers,partials,data) {
     var helper, alias1=container.escapeExpression;
 
-  return "                        <li><a data-name="
+  return "                        <li><a data-value="
     + alias1(((helper = (helper = helpers.key || (data && data.key)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"key","hash":{},"data":data}) : helper)))
     + " href=\"#\">"
     + alias1(container.lambda(depth0, depth0))

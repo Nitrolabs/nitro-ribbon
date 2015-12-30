@@ -1,5 +1,5 @@
 /*!
- * Nitrolabs Ribbon v0.0.1 (http://www.nitrolabs.com)
+ * Nitrolabs Ribbon v0.0.4 (http://www.nitrolabs.com)
  * Copyright 2016-2015 Nitrolabs Limited
  * Licensed under APACHE 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
@@ -1754,7 +1754,7 @@ $.Nitro.init = function(){
 
             // Add the options alias
             buttons.menuItems = function(){
-                return buttons.filter('.dropdown').next('ul.nitro-menu').find('li');
+                return buttons.filter('.dropdown-toggle').next('ul.nitro-menu').find('li');
             }
             return buttons;
         }
@@ -3300,7 +3300,7 @@ this["Ribbon"]["Templates"]["templates/ribbonContent.html"] = Handlebars.templat
 },"22":function(container,depth0,helpers,partials,data) {
     var helper, alias1=container.escapeExpression;
 
-  return "                        <li><a data-name="
+  return "                        <li><a data-value="
     + alias1(((helper = (helper = helpers.key || (data && data.key)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"key","hash":{},"data":data}) : helper)))
     + " href=\"#\">"
     + alias1(container.lambda(depth0, depth0))
