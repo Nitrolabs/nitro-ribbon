@@ -40,7 +40,7 @@ git clone https://github.com/NitroLabs/nitro-ribbon.git nitro-ribbon
 cd nitro-ribbon
 npm install
 bower install
-grunt 
+grunt
 grunt watch
 ```
 
@@ -83,6 +83,9 @@ $.ready(function(){
 	a.ribbon('share-button').click(function(event){
 		console.log('Share button clicked');
 	});
+
+	// Attach click handlers to the dropdown menu
+
 }
 
 
@@ -121,15 +124,15 @@ var config = {
 					},
 					{
 						type: 'big-button',
-						name: 'image-button',
+						name: 'message-dropdown',
 						label: 'Image',
 						glyph: 'mif-file-picture',
-						dropdown: [
-							"Message",
-							"Event",
-							"Meeting",
-							"Contact"
-						]
+						dropdown: {
+							"msg":"Message",
+							"evt":Event",
+							"mtg":"Meeting",
+							"cnt":"Contact"
+						}
 					}
 				],[
 					{
@@ -146,15 +149,15 @@ var config = {
 					},
 					{
 						type: 'mini-button',
-						name: 'image-button',
+						name: 'day-dropdown',
 						label: 'Calendar Next',
 						img: '/img/Calendar-Next.png',
-						dropdown: [
-							"Today",
-							"Monday",
-							"Tuesday",
-							"Friday"
-						]
+						dropdown: {
+							"today":Today",
+							"monday":"Monday",
+							"tuesday":"Tuesday",
+							"friday":"Friday"
+						}
 					}
 				],[
 					{
@@ -181,15 +184,15 @@ var config = {
 					},
 					{
 						type: 'small-button',
-						name: 'comments-small',
+						name: 'comments-dropdown',
 						label: 'comment',
 						glyph: 'mif-bubble',
-						dropdown: [
-							"Now",
-							"Soon",
-							"Later",
-							"Never"
-						]
+						dropdown: {
+							"now":"Now",
+							"soon":"Soon",
+							"later":"Later",
+							"never":"Never"
+						}
 					},
 				]
 			],
