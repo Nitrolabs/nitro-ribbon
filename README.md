@@ -54,7 +54,7 @@ Include the css and js files from the build folder:
 ```html
 <html>
     <head>
-        <script type="text/javascript " src="/ribbon/build/css/ribbon.js"></script>
+        <script type="text/javascript " src="/ribbon/build/js/ribbon.js"></script>
         <link rel="stylesheet" href="/ribbon/build/css/ribbon.css">
     </head>
 
